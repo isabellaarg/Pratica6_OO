@@ -17,15 +17,48 @@ public class RedeSocial {
         this.senha = senha;
     }
 
+    public String getDataCriacao() {
+        return dataCriacao;
+    }
+
+    public void setDataCriacao(String dataCriacao) {
+        this.dataCriacao = dataCriacao;
+    }
+
+    public String getNomeUsuario() {
+        return nomeUsuario;
+    }
+
+    public void setNomeUsuario(String nomeUsuario) {
+        this.nomeUsuario = nomeUsuario;
+    }
+
+    public String getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(String dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
     void inserePublicacao(Publicacao publi) {
         publicacoes.add(publi);
     }
 
     void imprimePublicaco() {
         System.out.println("Total de publicações: " + Publicacao.getContadorPublicacao());
-        for (Publicacao publi : publicacoes) {
-            System.out.println("Data de publicação: " + publi.getDataPublicacao());
-            System.out.println("Texto: " + publi.getTextoPublicacao());
+
+        for (int i = 0; i < publicacoes.size(); i++) {
+            System.out.println("Data de publicação: " + publicacoes.get(i).getDataPublicacao());
+            System.out.println("Texto: " + publicacoes.get(i).getTextoPublicacao());
         }
     }
 }

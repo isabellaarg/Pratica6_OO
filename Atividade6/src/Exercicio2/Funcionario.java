@@ -1,15 +1,15 @@
 package Exercicio2;
 
+import java.util.ArrayList;
+
 public class Funcionario extends Pessoa {
     private String departamento;
     private double salario;
     private String dataDeEntrada;
     private String rg;
     private boolean funcionarioEstaNaEmpresa;
+    ArrayList<Funcionario> func = new ArrayList<>();
 
-    public Funcionario(String nome, String email, String telefone) {
-        super(nome, email, telefone);
-    }
 
     public Funcionario(String nome, String email, String telefone, String departamento, double salario, String dataDeEntrada, String rg, boolean funcionarioEstaNaEmpresa) {
         super(nome, email, telefone);
@@ -67,7 +67,9 @@ public class Funcionario extends Pessoa {
     public void demitir() {
         this.funcionarioEstaNaEmpresa = false;
     }
-    public String mostrarDados(){
-        return "Nome: " + getNome() + "\nEmail: " + getEmail() + "\nTelefone: " + getTelefone() + "\nSalario: " + getSalario() + "\nDepartamento: " + getDepartamento() + "\nData de entrada: " + getDataDeEntrada();
+    void mostrarDados(){
+        //for (int i = 0; i < 2; i++ ) {
+            System.out.println("Nome: " + getNome() + "\nEmail: " + getEmail() + "\nTelefone: " + getTelefone() + "\nSalario: " + getSalario() + "\nDepartamento: " + getDepartamento() + "\nData de entrada: " + getDataDeEntrada());
+        //}
     }
 }

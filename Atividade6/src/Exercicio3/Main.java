@@ -1,11 +1,12 @@
 package Exercicio3;
 
+import javax.swing.*;
 import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
 
-        // Criação dos artigos
+        // Adicionando 10 objetos da classe Artigo em um ArrayList
         ArrayList<Artigo> artigos = new ArrayList<>();
         artigos.add(new Artigo("Título 1", "Resumo 1", "Autor 1"));
         artigos.add(new Artigo("Título 2", "Resumo 2", "Autor 2"));
@@ -18,14 +19,12 @@ public class Main {
         artigos.add(new Artigo("Título 9", "Resumo 9", "Autor 9"));
         artigos.add(new Artigo("Título 10", "Resumo 10", "Autor 10"));
 
-        // Criação da edição
+        // Criando um objeto do tipo Edicao e adicionando todos os artigos
         Edicao edicao = new Edicao(1, 1, "01/01/2023", 1000);
-        for (Artigo artigo : artigos) {
-            edicao.adicionaArtigos(artigo);
-        }
+        edicao.adicionaArtigos(artigos);
 
-        // Criação da revista científica
-        RevistaCientifica revista = new RevistaCientifica("Revista Científica", 1234567890, "Trimestral");
-        revista.adicionarEdicoes(edicao);
+        // Criando um objeto do tipo RevistaCientifica e adicionando a Edicao
+        RevistaCientifica revista = new RevistaCientifica("Revista Teste", 1234567890, "Mensal");
+        revista.adicionaEdicao(edicao);
     }
 }

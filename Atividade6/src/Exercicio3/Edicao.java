@@ -7,7 +7,6 @@ public class Edicao {
     private int volume;
     private String dataEdicao;
     private int tiragem;
-    private Artigo artigo;
     private ArrayList<Artigo> artigos;
 
     public Edicao(int numero, int volume, String dataEdicao, int tiragem) {
@@ -15,9 +14,7 @@ public class Edicao {
         this.volume = volume;
         this.dataEdicao = dataEdicao;
         this.tiragem = tiragem;
-        this.artigos = new ArrayList<>();
     }
-
     public int getNumero() {
         return numero;
     }
@@ -58,8 +55,10 @@ public class Edicao {
         this.artigos = artigos;
     }
 
-    //Criar o método que adicionaArtigos em uma Edição
-    public void adicionaArtigos(Artigo a){
-        artigos.add(artigo);
+    public void adicionaArtigo(Artigo artigo) {
+        this.artigos.add(artigo);
+    }
+
+    public void adicionaArtigos(ArrayList<Artigo> artigos) {
     }
 }

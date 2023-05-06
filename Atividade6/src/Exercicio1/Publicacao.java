@@ -25,8 +25,8 @@ public class Publicacao {
         return textoPublicacao;
     }
 
-    public void setTextoPublicacao(String textoPublicao) {
-        this.textoPublicacao = textoPublicao;
+    public void setTextoPublicacao(String textoPublicacao) {
+        this.textoPublicacao = textoPublicacao;
     }
 
     public String getLinkMidia() {
@@ -36,12 +36,7 @@ public class Publicacao {
     public void setLinkMidia(String linkMidia) {
         this.linkMidia = linkMidia;
     }
-
-    public static double getContadorPublicacao() {
+    public static double getContadorPublicacao(){
         return contadorPublicacao;
-    }
-
-    public static void setContadorPublicacao(double contadorPublicacao) {
-        Publicacao.contadorPublicacao = contadorPublicacao;
     }
 }

@@ -1,17 +1,17 @@
 package Exercicio2;
 
+import java.util.ArrayList;
+
 public class Empresa {
     private String nomeEmpresa;
     private String cnpj;
     private int qtde_de_funcionario;
-    Funcionario[] funcionarios;
-    Funcionario func;
+    ArrayList<Funcionario> funcionario = new ArrayList<>();
 
     public Empresa(String nomeEmpresa, String cnpj, int qtde_de_funcionario, Funcionario[] funcionarios) {
         this.nomeEmpresa = nomeEmpresa;
         this.cnpj = cnpj;
         this.qtde_de_funcionario = 0;
-        this.funcionarios = new Funcionario[qtde_de_funcionario];
     }
 
     public Empresa(String nomeEmpresa, String cnpj, int qtde_de_funcionario) {
@@ -44,19 +44,7 @@ public class Empresa {
         this.qtde_de_funcionario = qtde_de_funcionario;
     }
 
-    public Funcionario[] getFuncionarios() {
-        return funcionarios;
-    }
-
-    public void setFuncionarios(Funcionario[] funcionarios) {
-        this.funcionarios = funcionarios;
-    }
-    public void adicionarFuncionario(Funcionario funcionario) {
-        for (int i = 0; i < qtde_de_funcionario; i++) {
-            if (funcionarios[i] == null) {
-                funcionarios[i] = funcionario;
-                break;
-            }
-        }
+    void adicionarFuncionario(Funcionario func) {
+        funcionario.add(func);
     }
 }

@@ -1,10 +1,13 @@
 package Exercicio3;
 
+import java.util.ArrayList;
+
 public class RevistaCientifica {
     private String titulo;
     private long issn;
     private String peridiocidade;
     private Edicao edicoes;
+    private Edicao edicao;
 
     public RevistaCientifica(String titulo, long issn, String peridiocidade) {
         this.titulo = titulo;
@@ -36,11 +39,14 @@ public class RevistaCientifica {
         this.peridiocidade = peridiocidade;
     }
 
-    public Edicao getEdicoes() {
-        return edicoes;
+    public Edicao getEdicao() {
+        return edicao;
     }
 
-    public void adicionarEdicoes(Edicao e) {
-        e = edicoes;
+    public void setEdicao(Edicao edicao) {
+        this.edicao = edicao;
+    }
+    public void adicionaEdicao(Edicao edicao) {
+        this.edicao = edicao;
     }
 }
